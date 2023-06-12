@@ -6,6 +6,8 @@
   "repository": "https://github.com/creativetimofficial/notus-nextjs",
   "license": "MIT",
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^38.0.1",
+    "@ckeditor/ckeditor5-react": "^6.0.0",
     "@fortawesome/fontawesome-free": "5.15.3",
     "@heroicons/react": "^1.0.6",
     "@popperjs/core": "2.9.1",

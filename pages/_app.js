@@ -9,6 +9,7 @@ import PageChange from "components/PageChange/PageChange.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "styles/tailwind.css";
 import LoadingProvider from "context/useLoading";
+import { ToasterProvider } from "context/ToasterContext";
 
 Router.events.on("routeChangeStart", (url) => {
   console.log(`Loading: ${url}`);
@@ -76,7 +77,9 @@ export default class MyApp extends App {
         </Head>
         <Layout>
           <LoadingProvider>
-            <Component {...pageProps} />
+            <ToasterProvider>
+              <Component {...pageProps} />
+              </ToasterProvider>
           </LoadingProvider>
         </Layout>
       </React.Fragment>

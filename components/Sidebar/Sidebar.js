@@ -12,6 +12,11 @@ const SIDEBAR_MENU = [
     // link: 'admin/dashboard',
   },
   {
+    label: 'Blogs',
+    value: 'blogs',
+    // link: 'admin/blogs',
+  },
+  {
     label: 'Sales',
     value: 'sales',
     // link: 'admin/sales',
