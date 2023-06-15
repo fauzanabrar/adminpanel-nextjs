@@ -5,7 +5,6 @@ const BlogContext = createContext();
 export default BlogContext;
 
 export const BlogProvider = ({ children }) => {
-  
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -177,7 +176,6 @@ export const BlogProvider = ({ children }) => {
     setData(storedData);
   }, []);
 
-  
   // Mengupdate data konteks dan juga menyimpannya ke penyimpanan
   const updateData = (newData) => {
     // setData(newData);

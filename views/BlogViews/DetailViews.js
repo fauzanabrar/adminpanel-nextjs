@@ -97,9 +97,6 @@ export default function DetailViews({ id }) {
             />
           )}
           <div className="">
-            {/* {data?.isi?.split("\n").map((value) => {
-              return <p className="my-3">{value}</p>;
-            })} */}
             {console.log(data?.isi)}
             <div
               dangerouslySetInnerHTML={{
