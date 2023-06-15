@@ -71,7 +71,7 @@ export const BlogProvider = ({ children }) => {
           `,
           penulis: "John Doe",
           publishDate: "2021-01-01",
-          statusPublikasi: "Simpan Sebagai Draft",
+          statusPublikasi: "Draft",
         },
         {
           id: 5,
@@ -103,7 +103,7 @@ export const BlogProvider = ({ children }) => {
           `,
           penulis: "John Doe",
           publishDate: "2021-01-01",
-          kategori: ["Halo", "juga"],
+          kategori: ["kategori1", "kategori2"],
           statusPublikasi: "Published",
         },
         {
