@@ -88,6 +88,7 @@ export const BlogProvider = ({ children }) => {
 
   // Mengupdate data konteks dan juga menyimpannya ke penyimpanan
   const updateData = (newData) => {
+    console.log('dipanggil');
     setData(newData);
     localStorage.setItem("blogData", JSON.stringify(newData));
   };

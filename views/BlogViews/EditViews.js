@@ -43,18 +43,23 @@ export default function EditViews({ isOpen, onClose, id }) {
     setFormData(contextData);
   }, [context, id]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     const newData = {
       ...formData,
       id,
     };
-
+    
     const itemUpdate = context.data.findIndex((blog) => blog.id === Number(id));
 
     if (itemUpdate !== -1) {
       context.data[itemUpdate] = newData;
       context.updateData(context.data);
+    } else {
+      const indexItem = context.data.findIndex((blog) => blog.id === id);
+      if (indexItem !== -1) {
+        context.data[indexItem] = newData;
+        context.updateData(context.data);
+      }
     }
 
     const successToaster = {
@@ -90,8 +95,8 @@ export default function EditViews({ isOpen, onClose, id }) {
           <ConfirmationModal
             isOpen={isModalOpen}
             onClose={() => setIsModalOpen(false)}
-            onDelete={(e) => {
-              handleSubmit(e);
+            onDelete={() => {
+              handleSubmit();
             }}
           />
         </div>
