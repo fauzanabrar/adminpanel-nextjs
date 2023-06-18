@@ -33,27 +33,21 @@ export default function EditViews({ isOpen, onClose, id }) {
   const [selectedFile, setSelectedFile] = useState(null);
 
   useEffect(() => {
-    const contextData = context.data.find((blog) => blog.id === Number(id));
+    const getData = context.data.find((blog) => blog.id === Number(id));
+    let contextData = "";
+    if (getData) {
+      contextData = getData;
+    } else {
+      contextData = context.data.find((blog) => blog.id === id);
+    }
     setFormData(contextData);
   }, [context, id]);
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
-    // const elements = e.target.elements;
-
-    // const publishDate = elements.publishDate.defaultValue;
-
-    // const statusPublikasiElement = elements.statusPublikasi;
-    // const statusPublikasi = statusPublikasiElement.value;
-
-    // const penulis = elements.penulis.defaultValue;
-
+    e.preventDefault();
     const newData = {
       ...formData,
-      // statusPublikasi,
-      id: Number(id),
-      // publishDate,
-      // penulis,
+      id,
     };
 
     const itemUpdate = context.data.findIndex((blog) => blog.id === Number(id));

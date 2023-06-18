@@ -19,7 +19,14 @@ export default function DetailViews({ id }) {
   };
 
   useEffect(() => {
-    setData(context.data.find((item) => item.id === Number(id)));
+    const getData = context.data.find((blog) => blog.id === Number(id));
+    let contextData = "";
+    if (getData) {
+      contextData = getData;
+    } else {
+      contextData = context.data.find((blog) => blog.id === id);
+    }
+    setData(contextData);
   }, [data, id, context.data]);
 
   return (

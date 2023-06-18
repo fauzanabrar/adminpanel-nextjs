@@ -11,6 +11,7 @@ import TagInput from "components/common/Blogs/Forms/TagInput";
 
 import BlogContext from "context/BlogContext";
 import ToasterContext from "context/ToasterContext";
+import { nanoid } from "nanoid";
 
 const MOCK_DATA_OPTIONS = [
   { id: 1, label: "Publikasikan", value: "Published" },
@@ -44,7 +45,7 @@ export default function AddViews({ data = {} }) {
     e.preventDefault();
     const elements = e.target.elements;
 
-    const id = Number(elements.id.defaultValue);
+    const id = elements.id.defaultValue;
 
     const publishDate = new Date().toLocaleDateString().replaceAll("/", "-");
 
@@ -95,7 +96,7 @@ export default function AddViews({ data = {} }) {
             <input
               type="hidden"
               name="id"
-              defaultValue={context.data.length + 1}
+              defaultValue={nanoid(5)}
             />
             <input type="hidden" name="penulis" defaultValue={"Admin"} />
             <TextInput

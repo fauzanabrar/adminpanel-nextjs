@@ -12,7 +12,7 @@ export const BlogProvider = ({ children }) => {
     if (!(storedData && storedData.length > 0)) {
       const newData = [
         {
-          id: 1,
+          id: "1",
           gambar: "/img/blogs/img1.jpeg",
           judul:
             "Audiensi ala Coffee Morning antara Pimp FT Unhas dan CEO & Jajaran Direktur PT Bumi Karsa untuk Inisiasi Kelas Affirmasi Prodi S2 TS FTUH",
@@ -23,7 +23,7 @@ export const BlogProvider = ({ children }) => {
           statusPublikasi: "Published",
         },
         {
-          id: 2,
+          id: "2",
           gambar: "/img/blogs/img2.jpg",
           judul:
             "Tim Fakultas Teknik Unhas memenangkan the 1st Winner dan the Best Presentation pada ajang Southeast Paper Competition MARS#10",
@@ -34,7 +34,7 @@ export const BlogProvider = ({ children }) => {
           statusPublikasi: "Published",
         },
         {
-          id: 3,
+          id: "3",
           gambar: "/img/blogs/img3.jpg",
           judul:
             "Pererat Hubungan Bilateral Jepang-Indonesia Bidang Pendidikan, Konjen Jepang di Makassar Audiensi dengan Dekan FT UNHAS",
@@ -54,7 +54,7 @@ export const BlogProvider = ({ children }) => {
           statusPublikasi: "Published",
         },
         {
-          id: 4,
+          id: "4",
           gambar: "/img/blogs/img4.jpg",
           judul: "Finalisasi Verifikasi Pengakuan PAK Dosen FTUH",
           isi: `Tim Verifikasi Dokumen Pengakuan PAK (Penilaian Angka Kredit) Dosen lingkup FTUH melakukan FGD Finalisasi Verifikasi Dokumen Pengakuan PAK para Dosen di Tingkat Fakultas Teknik UNHAS pada Sabtu-Minggu, 29-30 April 2023. Pada kegiatan FGD ini, dilakukan Rapat Pleno untuk membahas setiap Dokumen Dosen FTUH dari 170an Dosen yang telah mengajukan Dokumen Pengakuan PAK Dosen yang telah dikompilasi ditingkat Departemen masing-masing pada tahapan sebelumnya.
