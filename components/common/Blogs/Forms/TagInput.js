@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 
 const MOCK_SUGGESSTIONS = [
-  "Java",
-  "Python",
-  "PHP",
-  "Ruby",
-  "NodeJs",
-  "DotNet",
-  "Laravel",
+  "alumni",
+  "umum",
+  "mahasiswa",
+  "nasional",
+  "dosen",
+  
 ];
 
 const TagInput = ({ name, title, defaultTags = "empty", handleChange }) => {

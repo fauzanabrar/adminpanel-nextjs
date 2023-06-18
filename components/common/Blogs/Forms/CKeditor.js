@@ -20,6 +20,15 @@ export default function CKeditor({ onChange, name, editorLoaded, value }) {
           name={name}
           editor={ClassicEditor}
           data={value}
+          onReady={(editor) => {
+            editor.editing.view.change((writer) => {
+              writer.setStyle(
+                "height",
+                "300px",
+                editor.editing.view.document.getRoot()
+              );
+            });
+          }}
           onChange={(event, editor) => {
             const data = editor.getData();
             onChange(data);
