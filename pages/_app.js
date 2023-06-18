@@ -8,6 +8,7 @@ import PageChange from "components/PageChange/PageChange.js";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "styles/tailwind.css";
+import "styles/CKeditorStyles.css";
 import LoadingProvider from "context/useLoading";
 import { ToasterProvider } from "context/ToasterContext";
 

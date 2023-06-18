@@ -24,7 +24,7 @@ export default function DetailViews({ id }) {
 
   return (
     <>
-      <div className={cx("bg-white rounded shadow-lg relative  p-4")}>
+      <div className={cx("bg-white rounded shadow-lg relative p-4 ")}>
         <div className="flex items-center justify-between p-4 border-b">
           <div className="flex items-center">
             <button onClick={handleGoBack}>
@@ -96,8 +96,7 @@ export default function DetailViews({ id }) {
               className="mx-auto my-6 border border-gray-300"
             />
           )}
-          <div className="">
-            {console.log(data?.isi)}
+          <div className="ck-content">
             <div
               dangerouslySetInnerHTML={{
                 __html: isEnglish ? data?.bodyEnglish : data?.isi,
