@@ -7,7 +7,7 @@ import { Search } from "../Search";
 import Pagination from "../Pagination/Pagination";
 import DeleteModal from "../Modals/DeleteModals";
 
-export default function MyTable({
+export default function BlogTable({
   color,
   titleTable,
   tbody,
@@ -181,7 +181,7 @@ export default function MyTable({
                   return (
                     <tr className="hover:bg-blueGray-300" key={index}>
                       <td className="border-t-0 text-center align-middle border-l-0 border-r-0 text-xs p-4 ">
-                        {index + 1}
+                        {index + 1 + (activePage - 1) * itemsPerPage}
                       </td>
                       <td className="border-t-0 align-middle text-center border-l-0 border-r-0 text-xs whitespace-normal p-2">
                         {data.gambar ? (
@@ -283,10 +283,10 @@ export default function MyTable({
   );
 }
 
-MyTable.defaultProps = {
+BlogTable.defaultProps = {
   color: "light",
 };
 
-MyTable.propTypes = {
+BlogTable.propTypes = {
   color: PropTypes.oneOf(["light", "dark"]),
 };

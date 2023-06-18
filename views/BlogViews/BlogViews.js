@@ -6,7 +6,7 @@ import BlogContext from "context/BlogContext";
 import ToasterContext from "context/ToasterContext";
 
 import Toaster from "components/common/Blogs/Toaster/Toaster";
-import { MyTable } from "components/common/Blogs/MyTable";
+import { BlogTable } from "components/common/Blogs/BlogTable";
 
 const BlogViews = () => {
   const router = useRouter();
@@ -62,7 +62,7 @@ const BlogViews = () => {
   return (
     <>
       {showToaster && <Toaster message={toasterMessage} status={"success"} />}
-      <MyTable
+      <BlogTable
         titleTable="Blogs Table"
         tbody={tableData}
         handleDetails={(data) => router.push(`blogs/detail?id=${data}`)}
