@@ -8,6 +8,11 @@ const Delete = (handleDelete) => {
         type="button"
         onClick={ handleDelete }
       >
+        <i
+          className={
+            "fas fa-eye mr-2 text-sm " 
+          }
+        ></i>{" "}
         Delete
       </button>
     </>
