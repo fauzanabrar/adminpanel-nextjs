@@ -6,6 +6,7 @@ import Add from "../ActionButton/Add";
 import { Search } from "../Search";
 import Pagination from "../Pagination/Pagination";
 import DeleteModal from "../Modals/DeleteModals";
+import styles from "./BlogTable.module.css";
 
 export default function BlogTable({
   color,
@@ -128,7 +129,7 @@ export default function BlogTable({
           />
         </div>
         <div className="block w-full overflow-x-auto flex-1">
-          <table className="items-center w-full bg-transparent border-collapse table-fixed">
+          <table className={styles.table}>
             <thead className="sticky top--1">
               <tr>
                 <th

@@ -1,0 +1,27 @@
+/* Contoh file modul CSS (misalnya, table.module.css) */
+
+.table {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    width: 100%;
+  }
+
+  
+  .table th:first-child,
+  .table td:first-child {
+    width: 6%;
+  }
+
+  .table th:nth-child(2),
+  .table td:nth-child(2) {
+    width: 6%;
+  }
+
+  .table th {
+    margin-top: 1rem;
+  }
+}
