@@ -49,16 +49,22 @@ export default function EditViews({ isOpen, onClose, id }) {
       id,
     };
     
-    const itemUpdate = context.data.findIndex((blog) => blog.id === Number(id));
+    let itemUpdate = context.data.findIndex((blog) => blog.id === Number(id));
 
     if (itemUpdate !== -1) {
       context.data[itemUpdate] = newData;
       context.updateData(context.data);
     } else {
-      const indexItem = context.data.findIndex((blog) => blog.id === id);
-      if (indexItem !== -1) {
-        context.data[indexItem] = newData;
+      itemUpdate = context.data.findIndex((blog) => blog.id === id);
+      if (itemUpdate !== -1) {
+        context.data[itemUpdate] = newData;
         context.updateData(context.data);
+      } else {
+        const indexItem = context.data.findIndex((blog) => blog.id === id);
+        if (indexItem !== -1) {
+          context.data[indexItem] = newData;
+          context.updateData(context.data);
+        }
       }
     }
 
@@ -72,7 +78,7 @@ export default function EditViews({ isOpen, onClose, id }) {
       ...toasterContext,
     });
 
-    router.push("/admin/blogs");
+    // router.push("/admin/blogs");
   };
 
   const handleFileChange = (file) => {
