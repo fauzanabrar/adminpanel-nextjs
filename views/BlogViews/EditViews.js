@@ -78,7 +78,7 @@ export default function EditViews({ isOpen, onClose, id }) {
       ...toasterContext,
     });
 
-    // router.push("/admin/blogs");
+    router.push("/admin/blogs");
   };
 
   const handleFileChange = (file) => {
